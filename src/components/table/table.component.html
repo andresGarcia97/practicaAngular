@@ -1,0 +1,28 @@
+<div class="container">
+    <hr><hr><hr>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr class="row">
+                <th class="col">Codigo</th>
+                <th class="col">Nombre</th>
+                <th class="col">Apellido</th>
+                <th class="col">Nota</th>
+                <th class="col">Observación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr [ngClass]="{perdio: devolverEstado(estudiante.nota) == 3, 
+                            invalido: devolverEstado(estudiante.nota) == 1,
+                            paso: devolverEstado(estudiante.nota) == 2}" class="row" 
+                *ngFor="let estudiante of estudiantes">
+                <th class="col">{{estudiante.codigo}}</th>
+                <th class="col">{{estudiante.nombre}}</th>
+                <th class="col">{{estudiante.apellido}}</th>
+                <th class="col">{{estudiante.nota}}</th>
+                <th class="col" *ngIf="devolverEstado(estudiante.nota) == 1">Nota Invalida</th>
+                <th class="col" *ngIf="devolverEstado(estudiante.nota) == 3">Perdio</th>
+                <th class="col" *ngIf="devolverEstado(estudiante.nota) == 2">Paso</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
