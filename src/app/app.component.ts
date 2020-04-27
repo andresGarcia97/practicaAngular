@@ -8,5 +8,5 @@ import { Component, Output } from '@angular/core';
 
 @Output()
 export class AppComponent {
-  title = 'practicaAngular';
+  title = 'Practica Angular';
 }

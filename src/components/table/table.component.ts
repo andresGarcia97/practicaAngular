@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Estudiante } from '../../clases/estudiante';
 
-declare var $: any;
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -31,9 +30,8 @@ export class TableComponent implements OnInit {
     else if (valor1 >= 3.0) {
       return 2;
     }
-    else{
+    else {
       return 3;
     }
   }
-
 }
